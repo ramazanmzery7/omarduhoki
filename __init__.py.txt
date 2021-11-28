@@ -1,5 +1,6 @@
-from VCPlayBot.function.admins import admins
-from VCPlayBot.function.admins import get
-from VCPlayBot.function.admins import set
+from pyrogram import Client
 
-__all__ = ["set", "get", "admins"]
+from VCPlayBot import config
+
+client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
+run = client.run
